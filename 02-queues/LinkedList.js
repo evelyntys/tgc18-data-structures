@@ -4,7 +4,7 @@ class LinkedList {
         // if the head is 'null', it means that the
         // linked list is empty
         this.head = null;
-        this.tail = null;
+        // this.tail = null;
     }
 
     // if we assume length of linkedlist is n,
@@ -73,6 +73,18 @@ class LinkedList {
             const toBeDeleted = current.getNext();
             current.setNext(toBeDeleted.getNext());
         }
+    }
+
+    getAt(index){
+        if (this.head == null){
+            return null;
+        }
+        // check that the index is not greater than the last item in the list?
+        let current = this.head;
+        for (let i=0; i< index; i++){
+            current = current.getNext();
+        }
+        return current;
     }
 
 }
