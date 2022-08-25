@@ -38,8 +38,9 @@ class LinkedList {
     }
 
     insertAt(index, newNode) {
-        if (this.head == null) {
-            return;
+        // empty list and we are inserted at index
+        if (this.head == null && index == 0) {
+            this.head == newNode;
         } else {
             let current = this.head;
             for (let i = 0; i < index - 1; i++) {
